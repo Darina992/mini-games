@@ -1,0 +1,1097 @@
+:root {
+  --main-bg-color: lightyellow;
+  --orange-color: #ff8400;
+  --yellow-color: #ffea00;
+  --brown-color: #8a4831;
+  --lightgreen-color: #8bcf00;
+  --green-color: #edf0bb;
+  --blue-color: #4169E1;
+  --darkorange-color:#FF8C00;
+  --gold-color:#FFD700;
+  --seagreen-color:#2E8B57;
+}
+body{
+  background: url('../img/bg.jpg') center bottom no-repeat ;
+  background-size: cover;
+  margin: 0 10px;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  min-height: 100vh;
+}
+#spa{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+.header{
+  width: 100%;
+  flex: 0 0 auto;
+}
+.menu-buttons{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+}
+.menu-button{
+  list-style: none;
+}
+.menu-button {
+  display: block;
+  width: 70px;
+  height: 70px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  border: 5px double var(--brown-color);
+  background-color: white;
+  background-repeat: no-repeat;
+  box-shadow: 2px 2px 5px grey;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.menu-button:hover{
+  border:5px double var(--lightgreen-color);
+}
+.menu-button:active{
+  transform: scale(0.95);
+}
+.menu-button a{
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.button-home{
+  background-image: url('../img/home.png');
+  background-position: 3px 0px;
+}
+.button-sound{
+  background-image: url('../img/sprite.png') ;
+  background-position: -52px 5px ;
+  transition: 0.5s;
+}
+.button-sound.on{
+  background-position: 3px 5px ;
+}
+/*content*/
+#content{
+  max-width: 100%;
+  flex: 1 0 auto;
+  position: relative;
+}
+#yellow-butterfly{
+  width: 50px;
+  height: 50px;
+  background-image: url('../img/butterfly.gif');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  position: absolute;
+  top:10%;
+  left: 0px;
+  z-index: 10;
+  transition: 0.2s;
+}
+h1{
+  font-size: 80px;
+  color: var(--orange-color);
+  text-shadow: 3px 2px 2px var(--brown-color);
+  font-weight: bold;
+  text-align: center;
+  margin: 20px 0 40px;
+}
+.mainmenu__list{
+  padding: 0;
+  list-style: none;
+  width: 307px;
+  margin: 0 auto;
+}
+.mainmenu__link{
+  display: block;
+  width: 100%;
+  height: 50px;
+  border:var(--brown-color) 3px dashed;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px var(--brown-color);
+  background-color: var(--yellow-color);
+  text-decoration: none;
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 2px 1px 1px var(--brown-color);
+  color:var(--orange-color);
+  line-height: 50px;
+  transition: 0.5s;
+}
+.mainmenu__link:hover{
+  color: var(--lightgreen-color);
+  font-size: 32px;
+}
+.mainmenu__link:active{
+  transform: scale(0.95);
+}
+/*content MemoryPage*/
+.aboutmemory-page h1{
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+h2{
+  color:var(--brown-color);
+  font-size: 40px;
+  text-align: center;
+  margin-top: 0;
+}
+.description{
+  width: 50%;
+  padding: 50px 20px 10px;;
+  margin: 0 auto;
+  border:5px solid var(--yellow-color);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);;
+  background-color: var(--green-color);
+  line-height: 1.5;
+}
+.button-start{
+  display: block;
+  width: 150px;
+  height: 50px;
+  margin: 20px auto;
+  background: rgb(245,203,0);
+  background: radial-gradient(circle, rgba(245,203,0,1) 0%, rgba(212,131,44,1) 100%);
+  border:5px double var(--yellow-color);
+  border-radius:10px;
+  font-size: 20px;
+  color: var(--brown-color);
+  text-shadow: 2px 1px 3px white;
+  transition: 0.3s;
+}
+.button-start:hover{
+  border-color: var(--orange-color);
+}
+.button-start:active{
+  transform: scale(0.95);
+}
+.button-start:disabled{
+  color:grey;
+  opacity:0.8;
+}
+h3{
+  color:var(--brown-color);
+  text-align: center;
+  height: 30px;
+  margin-top:0;
+  font-size: 30px;
+}
+.grid{
+  border:10px double var(--lightgreen-color);
+  display: flex;
+  flex-wrap: wrap;
+  width:600px;
+  height: 450px;
+  margin: 0 auto;
+}
+.grid img{
+  display: block;
+  transform-style: preserve-3d;
+  transition: all .3s ease;
+}
+.rotated {
+  transform: rotateY(-180deg);
+}
+.button-restart-memory{
+  background: rgb(230,63,27);
+  background: linear-gradient(0deg, rgba(230,63,27,1) 0%, rgba(253,187,45,1) 100%);
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+}
+/*content Rebuspage*/
+#user-name{
+  font-family: inherit;
+  font-size: 20px;
+  font-weight: bold;
+  color:var(--brown-color);
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px dotted var(--yellow-color);
+  box-shadow: 2px 2px 6px lightyellow;
+  transition: 0.5s;
+}
+#user-name:focus{
+  outline: none;
+  border-color:var(--orange-color);
+}
+.user-question{
+
+}
+.rebus-page{
+  max-width: 100%;
+  position: relative;
+}
+.rebus-content{
+  width: 600px;
+  max-width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  border: 3px dashed var(--lightgreen-color);
+  border-radius: 10px;
+}
+.rebus-content button{
+  background: rgba(156,252,70,1);
+}
+.rebus-img{
+  width:100%;
+  max-width: 100%;
+  height: 200px;
+  padding: 20px 0;
+  /*background-image: url('../img/rebus/rebus1.png');*/
+  background-repeat: no-repeat;
+  background-position: center 20px;
+}
+.rebus-answer{
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.3s;
+}
+.rebus-answer button{
+  display: inline-block;
+  margin: 0;
+}
+.rebus-content input{
+  border: 3px solid lightblue;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 10px;
+  width: 300px;
+  height: 50px;
+  font-family: inherit;
+  font-size: 26px;
+  color: var(--brown-color);
+  font-weight: 500;
+  font-style: italic;
+}
+.rebus-content input:focus{
+  outline: none;
+  border: 3px solid var(--yellow-color);
+}
+.rebus-clue{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transition: 0.3s;
+}
+.clue-item{
+  font-size: 24px;
+  font-weight: bold;
+  color: var(--orange-color);
+}
+.rebus-clue button{
+  display: inline-block;
+  margin: 20px;
+}
+.rebus-stage{
+  padding: 20px;
+  transition: 0.3s;
+}
+.star{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  /*background: url('../img/stars.png') 0 0 no-repeat;*/
+  position: absolute;
+  transform: scale(1) rotate(0);
+
+}
+.not-display{
+  display: none;
+}
+.star-animation{
+  animation: stars 5s ease;
+}
+.star-animation-move{
+  animation: move 7s ease;
+}
+@keyframes stars {
+  from {
+    opacity: 0;
+    transform:scale(0.2) rotate(0deg);
+  }
+  50%{
+    opacity: 1;
+    transform:scale(1) rotate(360deg);
+  }
+  to{
+    opacity:0;
+    transform:scale(0.2) rotate(0deg);
+  }
+}
+@keyframes move {
+    0% {
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50%{
+      transform: translate3d(0, 50px, 0) scale(0.5);
+    }
+    100% {
+        transform: translate3d(0, -1000px, 0) scale(0.25);
+    }
+}
+.yellow-star{
+  background-color: var(--yellow-color);
+}
+.stage-star{
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-image: url('../img/star.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.rebus-restart{
+  text-align: center;
+  transition: 0.3s;
+}
+.restart-text{
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--lightgreen-color);
+}
+#button-rebus-restart{
+  width: 200px;
+  margin-top:0;
+}
+#button-rebus-restart:hover{
+  border-color:lightblue;
+}
+/*content Seasons-page*/
+.seasons-page{
+  position: relative;
+  padding:10px;
+  box-sizing: border-box;
+  width: 800px;
+  height: 625px;
+  min-width: 100%;
+  background-color: white;
+  border:5px solid var(--blue-color);
+  border-radius:10px;
+}
+.first-line,.second-line,.third-line,.forth-line{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.first-line{
+  border-bottom: 3px dashed var(--brown-color);
+}
+.second-line{
+  border-bottom: 3px dashed var(--brown-color);
+}
+.third-line{
+  border-bottom: 3px dashed var(--brown-color);
+}
+.forth-line{
+
+}
+.season{
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  text-align: center;
+  line-height: 130px;
+  font-size: 24px;
+  font-family: 'Seymour One', sans-serif;
+  color: var(--lightgreen-color);
+
+}
+.season-img{
+  display: inline-block;
+  width: 130px;
+  height: 130px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border:3px solid var(--lightgreen-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px grey;
+  margin: 5px;
+  font-size: 0;
+}
+.timer{
+  width: 120px;
+  height: 30px;
+  border:3px dashed var(--blue-color);
+  border-radius: 5px;
+  position: absolute;
+  top: -50px;
+  left: calc(50% - 60px);
+  color:var(--blue-color);
+  font-size: 26px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+}
+.item-selected{
+  border:3px dashed var(--lightgreen-color);
+  border-radius:5px;
+}
+.item-to-drop{
+  border:3px dashed var(--blue-color);
+  border-radius:5px;
+}
+/*content records*/
+.records-table{
+  position: relative;
+}
+.records{
+  width: 600px;
+  max-width: 100%;
+  border-collapse: collapse;
+  background-color:rgba(255, 255, 255, 0.8);
+  font-size: 20px;
+  font-family: inherit;;
+  font-weight: bold;
+  color: var(--seagreen-color);
+  text-align: center;
+}
+.records th,.records td{
+  border:2px solid var(--lightgreen-color);
+  height: 40px;
+}
+.records th{
+  font-size: 24px;
+  color: var(--brown-color);
+  background-color: white;
+}
+#button-send:hover{
+  border-color:var(--lightgreen-color);
+}
+#seasons-user-name{
+  display: block;
+  margin: 10px auto;
+  padding: 5px;
+  border: 3px solid var(--lightgreen-color);
+  background-color:rgba(255, 255, 255, 0.8);
+  width: 250px;
+  height: 30px;
+  font-size: 20px;
+  font-family: inherit;
+  color:var(--brown-color);
+  border-radius: 5px;
+}
+#seasons-user-name:focus{
+  outline: none;
+  border-color: var(--brown-color);
+}
+.seasonsscore-page p{
+  font-size:26px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom:0;
+  margin-top: 35px;
+  color:var(--brown-color);
+}
+.seasonsscore-page h2{
+  margin-bottom: 10px;
+}
+/*loader*/
+.loader {
+  position: absolute;
+  left: calc(50% - 50px);
+  top: calc(50% - 30px);
+  z-index: 100;
+}
+.loader-inner {
+  bottom: 0;
+  height: 60px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+.loader-line-wrap {
+  animation:spin 1500ms cubic-bezier(.175, .885, .32, 1.275) infinite;
+  box-sizing: border-box;
+  height: 50px;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform-origin: 50% 100%;
+  width: 100px;
+}
+.loader-line {
+  border: 4px solid transparent;
+  border-radius: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  left: 0;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100px;
+}
+.loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+.loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+.loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+.loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+.loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+.loader-line-wrap:nth-child(1) .loader-line {
+  border-color: var(--orange-color);
+  height: 90px;
+  width: 90px;
+  top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line {
+  border-color: var(--yellow-color);
+  height: 76px;
+  width: 76px;
+  top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+  border-color: var(--lightgreen-color);
+  height: 62px;
+  width: 62px;
+  top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line {
+  border-color: var(--orange-color);
+  height: 48px;
+  width: 48px;
+  top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+  border-color: var(--blue-color);
+  height: 34px;
+  width: 34px;
+  top: 35px;
+}
+@keyframes spin {
+0%, 15% {
+	transform: rotate(0);
+}
+100% {
+	transform: rotate(360deg);
+	}
+}
+/*Math-page*/
+.aboutmath-page{
+  height: 400px;
+}
+.buttons-math{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.button-math{
+  width:200px;
+  height: 130px;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 90px;
+  color:var(--main-bg-color);
+  margin:50px 22px;
+  transition: 0.5s;
+  box-shadow: 2px 2px 5px grey;
+  padding: 0;/*для iphone*/
+}
+.button-math:hover{
+  border-color: white;
+}
+#button10{
+  background: var(--darkorange-color);
+}
+#button20{
+  background: var(--seagreen-color);
+}
+#button50{
+  background: var(--gold-color);
+}
+#button100{
+  background: var(--orange-color);
+}
+.aboutmath-page,.math-page, .math_minus-page, .math_multiple-page, .math_division-page{
+  width:1000px;
+  max-width:100%;
+  background-color: var(--main-bg-color);
+  border: 4px solid var(--seagreen-color);
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.math-progress{
+  height: 50px;
+  background-color: var(--darkorange-color);
+  color: var(--main-bg-color);
+  text-align: center;
+  box-shadow: 2px 0 5px grey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.progress-text{
+  margin: 10px 15px;
+}
+#button-startagain-math{
+  display: inline-block;
+  width: 26%;
+  height: 40px;
+  margin: 10px 15px;
+  background: var(--main-bg-color);
+  color: var(--seagreen-color);
+}
+.show-progress{
+  position: absolute;
+  top:30%;
+  left:calc(50% - 100px);
+  width: 200px;
+  height: 200px;
+  font-size: 50px;
+  color: var(--seagreen-color);
+  text-align: center;
+  font-weight: bold;
+}
+.answer.cursor{
+  cursor: default;
+}
+.math-text{
+  margin: 0;
+  padding: 20px 10px;
+  background-color: var(--seagreen-color);
+  color:var(--main-bg-color);
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+.mathmenu{
+  box-shadow: 0 3px 5px grey;
+}
+.mathmenu__list{
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px;
+  list-style: none;
+  background-color: var(--seagreen-color);
+}
+.mathmenu__link{
+  text-decoration: none;
+  color:var(--main-bg-color);
+
+}
+.mathmenu__link:hover{
+  color:var(--green-color);
+}
+.mathmenu__link.active{
+  border-bottom:2px solid white;
+}
+.math-conteiner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.equation-conteiner{
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 50px 10px
+}
+.num1{
+  color:var(--darkorange-color);
+}
+.num1, .num2,.sign,.equals{
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 160px;
+  font-weight: 700;
+  text-shadow:2px 2px 1px seagreen;
+}
+.num2{
+  color:var(--gold-color);
+}
+.sign{
+  color:var(--seagreen-color);
+}
+.equals{
+  color:var(--darkorange-color);
+}
+.answer-conteiner{
+  width: 30%;
+}
+.answer{
+  width: calc(100% - 20px);
+  height: 130px;
+  line-height: 130px;
+  margin:20px 10px;
+  font-family: 'Balsamiq Sans', cursive;
+  font-size: 100px;
+  font-weight: 700;
+  background-color: var(--lightgreen-color);
+  color:white;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px grey;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+}
+.answer1{
+  background-color: gold;
+}
+.answer2{
+  background-color: seagreen;
+}
+.answer3{
+  background-color: darkorange;
+}
+/*footer*/
+.footer{
+  flex: 0 0 auto;
+}
+
+/*----adaptive----*/
+@media (max-width:1000px) {
+  .description{
+    width: 70%;
+    padding: 30px 20px 10px;
+  }
+  .num1, .num2,.sign,.equals{
+    font-size: 140px;
+  }
+}
+@media (max-width:850px) {
+  .seasons-page{
+    width: 720px;
+    max-width: 100%;
+  }
+  .answer{
+    font-size: 100px;
+    height: 120px;
+  }
+  .answer{
+    font-size: 80px;
+  }
+
+}
+@media (max-width:750px) {
+  .description{
+    width: 80%;
+    padding: 20px 10px 5px;
+  }
+  .seasons-page{
+    height: auto;
+    margin-top: 30px;
+  }
+  .season-img{
+    width: 110px;
+    height: 110px;
+    border:2px solid var(--lightgreen-color);
+    touch-action: none;
+  }
+  .item-selected{
+    border:2px dashed var(--lightgreen-color);
+  }
+  .item-to-drop{
+    border:2px dashed var(--blue-color);
+  }
+  .aboutmath-page{
+    height: auto;
+    margin-top:50px;
+  }
+  .buttons-math{
+    flex-wrap: wrap;
+  }
+  .button-math{
+    margin: 20px 20px;
+  }
+  .answer{
+    font-size: 65px;
+    height: 110px;
+    line-height: 110px;
+    margin:10px 5px;
+  }
+  .num1, .num2,.sign,.equals{
+    font-size: 130px;
+  }
+}
+@media (max-width:665px) {
+  .grid{
+    width: 500px;
+    height: 375px;
+  }
+  .grid img{
+    width: 125px;
+    height: 125px;
+  }
+  .season-img{
+    width: 85px;
+    height: 85px;
+  }
+  .season-img img{
+    width: 85px;
+    height: 85px;
+  }
+  .season{
+    font-size: 20px;
+  }
+  .records{
+    width: 380px;
+  }
+  .star-animation{
+    animation: stars-small 5s ease;
+  }
+  @keyframes stars-small {
+    from {
+      opacity: 0;
+      transform:scale(0.1) rotate(0deg);
+    }
+    50%{
+      opacity: 1;
+      transform:scale(0.7) rotate(360deg);
+    }
+    to{
+      opacity:0;
+      transform:scale(0.1) rotate(0deg);
+    }
+  }
+  .answer{
+    font-size: 50px;
+    height: 100px;
+    line-height: 100px;
+  }
+  .num1, .num2,.sign,.equals{
+    font-size: 120px;
+  }
+  #button-startagain-math{
+    font-size: 14px;
+  }
+}
+@media (max-width:550px) {
+  h1{
+    font-size: 65px;
+  }
+  .grid{
+    width: 440px;
+    height: 330px;
+  }
+  h3{
+    margin-bottom: 50px;
+  }
+  .grid img{
+    width: 110px;
+    height: 110px;
+  }
+  .rebus-content input{
+    width:200px;
+    height: 40px;
+  }
+  .season-img{
+    width: 70px;
+    height: 70px;
+  }
+  .season-img img{
+    width: 70px;
+    height: 70px;
+  }
+  .first-line,.second-line,.third-line,.forth-line{
+    height: 100px;
+  }
+  .button-math{
+    width: 150px;
+    height: 100px;
+    font-size: 60px;
+  }
+  .math-text{
+    font-size: 20px;
+  }
+  .answer{
+    font-size: 40px;
+    height: 80px;
+    line-height: 80px;
+    margin:5px 2.5px;
+  }
+  .num1, .num2,.sign,.equals{
+    font-size: 100px;
+  }
+  .math-page,.math_minus-page, .math_multiple-page, .math_division-page{
+    margin-top: 50px;
+  }
+  #button-startagain-math{
+    font-size: 13px;
+  }
+
+}
+@media (max-width:480px) {
+  h1{
+    font-size: 60px;
+    margin-bottom: 10px;
+  }
+  .grid{
+    width: 400px;
+    height: 300px;
+  }
+  .grid img{
+    width: 100px;
+    height: 100px;
+  }
+  .rebus-content input{
+    width:300px;
+    height: 40px;
+    margin-bottom: 20px;
+
+  }
+  .rebus-answer{
+    flex-direction: column;
+    padding: 0;
+  }
+  .rebus-img{
+    background-size: contain;
+    background-position: 0 center;
+  }
+  .season-img{
+    width: 60px;
+    height: 60px;
+  }
+  .season-img img{
+    width: 60px;
+    height: 60px;
+  }
+  .season{
+    font-size: 18px;
+  }
+  .button-math{
+    width: 120px;
+    height: 80px;
+    font-size: 50px;
+  }
+  .math-text{
+    font-size: 18px;
+  }
+  .math-page,.math_minus-page, .math_multiple-page, .math_division-page{
+    font-size: 16px;
+  }
+  .answer{
+    font-size: 30px;
+    height: 70px;
+    line-height: 70px;
+    margin:5px 2.5px;
+  }
+  .num1, .num2,.sign,.equals{
+    font-size: 80px;
+  }
+  #button-startagain-math{
+    font-size: 12px;
+  }
+  .show-progress{
+    font-size: 30px;
+    top:35%;
+  }
+}
+@media (max-width:435px) {
+  h1{
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  h2{
+    font-size: 30px;
+  }
+  .mainmenu__list{
+    width: 250px;
+  }
+  .grid{
+    width: 340px;
+    height: 255px;
+  }
+  .grid img{
+    width: 85px;
+    height: 85px;
+  }
+  .rebus-content input{
+    width:250px;
+  }
+  .rebus-clue button {
+    margin : 20px 10px 20px 0;
+  }
+  .clue-item{
+    font-size: 20px;
+  }
+  .season-img{
+    width: 50px;
+    height: 50px;
+    margin: 1px;
+  }
+  .season-img img{
+    width: 50px;
+    height: 50px;
+  }
+  .season{
+    font-size: 17px;
+  }
+  .first-line,.second-line,.third-line,.forth-line{
+    height: 80px;
+  }
+  .answer{
+    font-size: 30px;
+    height: 50px;
+    line-height: 50px;
+  }
+  .num1, .num2,.sign,.equals{
+    font-size: 60px;
+  }
+}
+@media (max-width:380px) {
+  .grid{
+    width: 280px;
+    height: 210px;
+  }
+  .grid img{
+    width: 70px;
+    height: 70px;
+  }
+  .math-page,.math_minus-page, .math_multiple-page, .math_division-page{
+    font-size:14px;
+  }
+  .answer{
+    font-size: 25px;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media (max-width:350px) {
+  h1{
+    font-size: 40px;
+    margin-bottom: 10px;
+  }
+  #user-name{
+    height: 35px;
+  }
+  .season-img{
+    width: 40px;
+    height: 40px;
+    margin: 0.5px;
+  }
+  .season-img img{
+    width: 40px;
+    height: 40px;
+  }
+  .season{
+    font-size: 16px;
+  }
+  .first-line,.second-line,.third-line,.forth-line{
+    height: 60px;
+  }
+
+}
